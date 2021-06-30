@@ -45,7 +45,7 @@ app.use(function(req, res, next){
 app.use("/",indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
 	console.log("YelpCam Server has Started!");
 });
 
