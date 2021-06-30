@@ -14,8 +14,9 @@ var express    		 	 = require("express"),
 var commentRoutes    = require("./routes/comments"),
 		campgroundRoutes = require("./routes/campgrounds"),
 		indexRoutes      = require("./routes/index");
-
-mongoose.connect("mongodb://localhost/yelp_camp1");
+//heroku config:set MONGODB_URI="mongodb+srv://kushagra:allthebest@cluster0.nt9fa.mongodb.net/yelpcamp?retryWrites=true&w=majority";
+mongoose.connect("mongodb+srv://kushagra:allthebest@cluster0.nt9fa.mongodb.net/yelpcamp?retryWrites=true&w=majority");
+//mongodb://localhost/yelp_camp1"
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname+"/public"));
